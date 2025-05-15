@@ -1,0 +1,31 @@
+#root {
+  background-color: #333;
+}
+
+.row .card {
+  background-color: transparent;
+  border: 2px solid gray;
+  color: #fff;
+  border-radius: 20px;
+}
+
+.card-image-top {
+  height: 500px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+h5 {
+  min-height: 100px;
+  font-size: 14px;
+}
+
+.price {
+  font-size: 18px;
+}
+
+.desc {
+  padding: 10px 5px 0 5px;
+  border-top: 1px dashed gray;
+  font-size: 16px;
+}
