@@ -5,8 +5,13 @@ const About = () => {
   return (
     <>
       <HeadNavbar />
-      <div>
-        <h1>About Us</h1>
+      <div className="container">
+        <div className="row">
+          <div className="col-12">
+            <h1>About Us</h1>
+          </div>
+        </div>
+        <hr />
       </div>
     </>
   )

@@ -21,17 +21,17 @@ const links = [
 const HeadNavbar = () => {
   return (
     <>
-      <header>
+      <header className="container-fluid bg-body-secondary">
         <nav>
-          <ul>
+          <div className="row d-flex justify-content-center align-item-center p-3">
             {links.map(link => (
-              <li key={link.id}>
-                <NavLink to={link.path}>
+              <div key={link.id} className="col-1 text-center nav-item">
+                <NavLink to={link.path} className="nav-link">
                   {link.label}
                 </NavLink>
-              </li>
+              </div>
             ))}
-          </ul>
+          </div>
         </nav>
       </header>
     </>

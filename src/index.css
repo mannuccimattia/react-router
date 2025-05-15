@@ -1,31 +1,119 @@
-#root {
-  background-color: #333;
+body {
+  background-color: #333 !important;
 }
 
-.row .card {
-  background-color: transparent;
-  border: 2px solid gray;
+#root {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Header */
+header .nav-link {
+  font-size: 20px;
+  padding-bottom: 2px;
+}
+
+header a.active {
+  font-weight: 700;
+  background-color: #0D6EFD;
   color: #fff;
   border-radius: 20px;
 }
 
-.card-image-top {
-  height: 500px;
+hr {
+  border-color: #fff !important;
+}
+
+/* Page content */
+.row h1 {
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  margin: 3rem 0;
+}
+
+
+/* Card*/
+.card {
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   overflow: hidden;
-  border-radius: 20px;
+  transition: transform 0.2s ease;
 }
 
-h5 {
-  min-height: 100px;
-  font-size: 14px;
+/* Hover effect */
+.card:hover {
+  transform: scale(1.02);
 }
 
-.price {
-  font-size: 18px;
+/* Card image */
+.card-image-top {
+  width: 100%;
+  height: 250px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 1rem;
 }
 
-.desc {
-  padding: 10px 5px 0 5px;
-  border-top: 1px dashed gray;
-  font-size: 16px;
+.card-image-top img {
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Card content */
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.card-body h5 {
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.card-body .price {
+  font-weight: bold;
+  color: #333;
+}
+
+.card-body .desc {
+  padding: 1rem;
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 0;
+}
+
+/* Loader */
+.loader {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 32px 0 #fff, -32px 0 #fff;
+  position: relative;
+  animation: flash 0.5s ease-out infinite alternate;
+}
+
+@keyframes flash {
+  0% {
+    background-color: #FFF2;
+    box-shadow: 32px 0 #FFF2, -32px 0 #FFF;
+  }
+
+  50% {
+    background-color: #FFF;
+    box-shadow: 32px 0 #FFF2, -32px 0 #FFF2;
+  }
+
+  100% {
+    background-color: #FFF2;
+    box-shadow: 32px 0 #FFF, -32px 0 #FFF2;
+  }
 }

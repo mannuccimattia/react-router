@@ -29,11 +29,14 @@ const Products = () => {
             <h1>Products</h1>
           </div>
         </div>
+        <hr />
 
         <div className="row g-3">
-          {products === null ? <div>Loading...</div>
+          {products === null ? <div className="d-flex justify-content-center">
+            <span class="loader"></span>
+          </div>
             :
-            <div className="row g-3">
+            <div className="row g-4">
               {products.map(product => (
                 <div
                   className="col-12 col-md-6 col-lg-4"
@@ -53,7 +56,8 @@ const Products = () => {
                   </div>
                 </div>
               ))}
-            </div>}
+            </div>
+          }
         </div>
       </div>
     </>
