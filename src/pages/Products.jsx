@@ -1,10 +1,14 @@
 import { NavLink } from "react-router-dom"
+import HeadNavbar from "../components/HeadNavbar"
 
 const Products = () => {
   return (
-    <div>
-      <h1>Products</h1>
-    </div>
+    <>
+      <HeadNavbar />
+      <div>
+        <h1>Products</h1>
+      </div>
+    </>
   )
 }
 
