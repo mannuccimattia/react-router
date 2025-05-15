@@ -8,12 +8,12 @@ const links = [
   },
   {
     id: 2,
-    path: "/",
+    path: "/about",
     label: "About"
   },
   {
     id: 3,
-    path: "/",
+    path: "/products",
     label: "Products"
   }
 ]
