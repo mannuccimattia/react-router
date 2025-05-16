@@ -6,6 +6,7 @@ import { useParams, useNavigate } from 'react-router-dom'
 const ProductDetail = () => {
 
   const { id } = useParams();
+  const navigate = useNavigate();
 
   const [product, setProduct] = useState(null);
 
@@ -50,6 +51,27 @@ const ProductDetail = () => {
                   </div>
                 )
               }
+            </div>
+
+            <div className="row my-3 justify-content-around">
+              <button
+                className='btn btn-primary'
+                onClick={() => {
+                  navigate(`/products/${parseInt(id) - 1}`)
+                }}
+                disabled={id == 1 ? true : false}
+              >
+                Prev
+              </button>
+
+              <button
+                className='btn btn-primary'
+                onClick={() => {
+                  navigate(`/products/${parseInt(id) + 1}`)
+                }}
+              >
+                Next
+              </button>
             </div>
           </div>
         </div>
