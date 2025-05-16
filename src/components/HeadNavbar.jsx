@@ -23,9 +23,9 @@ const HeadNavbar = () => {
     <>
       <header className="container-fluid bg-body-secondary">
         <nav>
-          <div className="row d-flex justify-content-center align-item-center p-3">
+          <div className="row justify-content-center align-items-center p-3">
             {links.map(link => (
-              <div key={link.id} className="col-1 text-center nav-item">
+              <div key={link.id} className="col-auto text-center nav-item px-3 py-2">
                 <NavLink to={link.path} className="nav-link">
                   {link.label}
                 </NavLink>

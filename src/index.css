@@ -8,8 +8,12 @@ body {
 
 /* Header */
 header .nav-link {
-  font-size: 20px;
-  padding-bottom: 2px;
+  padding: 0.3rem 0.5rem;
+}
+
+header a {
+  border: 1px solid transparent !important;
+  border-radius: 20px;
 }
 
 header a.active {
@@ -17,6 +21,11 @@ header a.active {
   background-color: #0D6EFD;
   color: #fff;
   border-radius: 20px;
+}
+
+header a:hover {
+  border: 1px solid #0D6EFD !important;
+  transition: 0.4s;
 }
 
 hr {
@@ -46,7 +55,7 @@ hr {
 }
 
 /* Card image */
-.card-image-top {
+.card-img-top {
   width: 100%;
   height: 250px;
   background-color: #fff;
@@ -57,7 +66,7 @@ hr {
   padding: 1rem;
 }
 
-.card-image-top img {
+.card-img-top img {
   width: auto;
   height: 100%;
   object-fit: cover;
@@ -69,6 +78,10 @@ hr {
   flex-direction: column;
   justify-content: space-between;
   padding: 1rem;
+}
+
+.card-title-wrapper {
+  height: 6rem;
 }
 
 .card-body h5 {

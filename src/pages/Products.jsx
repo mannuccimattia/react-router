@@ -31,32 +31,42 @@ const Products = () => {
         </div>
         <hr />
 
-        <div className="row g-3">
+        <div className="row g-4 mt-3">
           {products === null ? <div className="d-flex justify-content-center">
-            <span class="loader"></span>
+            <span className="loader"></span>
           </div>
             :
-            <div className="row g-4">
-              {products.map(product => (
-                <div
-                  className="col-12 col-md-6 col-lg-4"
-                  key={product.id}
-                >
-                  <div className="card h-100 d-flex flex-column">
-                    <div className="card-image-top">
-                      <img src={product.image} className='img-fluid' alt={product.description} />
-                    </div>
-                    <div className="card-body p-0">
-                      <h5 className="bg-primary p-3 fw-semibold">
-                        {product.title}
-                      </h5>
-                      <p className="my-2 text-center price">Price: € {product.price.toFixed(2, 0)}</p>
-                      <p className="desc">{product.description}</p>
+            <>
+              {
+                products.map(product => (
+                  <div
+                    className="col-12 col-md-6 col-lg-4"
+                    key={product.id}
+                  >
+                    <div className="card h-100 d-flex flex-column">
+                      <div className="card-img-top">
+                        <img src={product.image} className='img-fluid' alt={product.description} />
+                      </div>
+                      <div className="card-body p-0">
+                        <div className="card-title-wrapper">
+                          <h5 className="bg-primary p-3 fw-semibold">
+                            {product.title}
+                          </h5>
+                        </div>
+                        <p className="my-2 text-center price">Price: € {product.price.toFixed(2, 0)}</p>
+                        <div className="text-center">
+                          <button
+                            className="btn btn-primary my-4"
+                          >
+                            Dettagli
+                          </button>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
-            </div>
+                ))
+              }
+            </>
           }
         </div>
       </div>
