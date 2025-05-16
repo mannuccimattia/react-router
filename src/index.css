@@ -33,12 +33,12 @@ hr {
 }
 
 /* Common Page content */
-.row h1 {
+.row h1,
+.row h3 {
   color: #fff;
   font-weight: 700;
   margin: 3rem 0;
 }
-
 
 /* Card*/
 .card {
@@ -77,6 +77,11 @@ hr {
   flex-direction: column;
   justify-content: space-between;
   padding: 1rem;
+  transition: 0.3s;
+}
+
+.card-body:hover {
+  background-color: #888;
 }
 
 .card-title-wrapper {
@@ -133,4 +138,27 @@ hr {
 /* Product Details */
 .image-container {
   max-width: 500px;
+}
+
+.image-container img {
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 0px 15px 5px #C0C0C0;
+  box-shadow: 0px 0px 15px 2px #000000;
+}
+
+.row em,
+.row p {
+  color: #fff;
+}
+
+.row em {
+  font-size: 14px;
+}
+
+.row em::before {
+  content: "Category: (";
+}
+
+.row em::after {
+  content: ")";
 }
