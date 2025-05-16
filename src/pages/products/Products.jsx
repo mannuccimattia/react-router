@@ -2,7 +2,7 @@ import { useState, useEffect } from "react"
 import { NavLink } from "react-router-dom"
 import axios from "axios"
 
-import HeadNavbar from "../components/HeadNavbar"
+import HeadNavbar from "../../components/HeadNavbar"
 
 const Products = () => {
 
@@ -32,8 +32,8 @@ const Products = () => {
         <hr />
 
         <div className="row g-4 mt-3">
-          {products === null ? <div className="d-flex justify-content-center">
-            <span className="loader"></span>
+          {products === null ? <div className="col-12 d-flex justify-content-center">
+            <div className="loader"></div>
           </div>
             :
             <>
@@ -55,11 +55,12 @@ const Products = () => {
                         </div>
                         <p className="my-2 text-center price">Price: € {product.price.toFixed(2, 0)}</p>
                         <div className="text-center">
-                          <button
+                          <NavLink
                             className="btn btn-primary my-4"
+                            to={`/products/${product.id}`}
                           >
                             Dettagli
-                          </button>
+                          </NavLink>
                         </div>
                       </div>
                     </div>
