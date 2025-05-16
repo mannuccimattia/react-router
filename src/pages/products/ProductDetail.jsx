@@ -9,6 +9,14 @@ const ProductDetail = () => {
   const navigate = useNavigate();
 
   const [product, setProduct] = useState(null);
+  const [maxPage, setMaxPage] = useState(null);
+
+  const getMaxPage = () => {
+    axios.get(`https://fakestoreapi.com/products`).then(res => {
+      const maxId = Math.max(...res.data.map(obj => obj.id));
+      setMaxPage(maxId);
+    }).catch(err => console.log(err))
+  }
 
   const getSingleProduct = () => {
     axios.get(`https://fakestoreapi.com/products/${id}`).then(res => {
@@ -18,7 +26,9 @@ const ProductDetail = () => {
 
   useEffect(() => {
     getSingleProduct();
+    getMaxPage();
   }, [id]);
+
 
   return (
     <>
@@ -71,6 +81,7 @@ const ProductDetail = () => {
                             onClick={() => {
                               navigate(`/products/${parseInt(id) + 1}`)
                             }}
+                            disabled={id == maxPage ? true : false}
                           >
                             Next
                           </button>
