@@ -31,3 +31,5 @@ Completiamo il nostro routing con l’aggiunta delle pagine di dettaglio!
 
 - Centralizzare la Navbar grazie a un Layout
 - Proviamo a inserire nella pagina di dettaglio una navigazione che ci consenta di andare al post precedente e a quello successivo
+
+DONE

@@ -80,7 +80,7 @@ hr {
   transition: 0.3s;
 }
 
-.card-body:hover {
+.card:hover .card-body {
   background-color: #888;
 }
 
