@@ -2,8 +2,6 @@ import { useState, useEffect } from "react"
 import { NavLink } from "react-router-dom"
 import axios from "axios"
 
-import HeadNavbar from "../../components/HeadNavbar"
-
 const Products = () => {
 
   const [products, setProducts] = useState(null);
@@ -21,7 +19,6 @@ const Products = () => {
 
   return (
     <>
-      <HeadNavbar />
       <div className="container">
 
         <div className="row">

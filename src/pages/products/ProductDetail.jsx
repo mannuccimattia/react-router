@@ -2,8 +2,6 @@ import axios from 'axios'
 import { useState, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 
-import HeadNavbar from '../../components/HeadNavbar'
-
 
 const ProductDetail = () => {
 
@@ -23,8 +21,6 @@ const ProductDetail = () => {
 
   return (
     <>
-      <HeadNavbar />
-
       <div className='container'>
         <div className="row">
           <div className="col-12">
