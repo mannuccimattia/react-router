@@ -32,11 +32,10 @@ hr {
   border-color: #fff !important;
 }
 
-/* Page content */
+/* Common Page content */
 .row h1 {
   color: #fff;
   font-weight: 700;
-  text-align: center;
   margin: 3rem 0;
 }
 
@@ -129,4 +128,9 @@ hr {
     background-color: #FFF2;
     box-shadow: 32px 0 #FFF, -32px 0 #FFF2;
   }
+}
+
+/* Product Details */
+.image-container {
+  max-width: 500px;
 }
